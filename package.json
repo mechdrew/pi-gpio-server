@@ -1,0 +1,26 @@
+{
+  "name" : "pi-gpio-server",
+  "version" : "0.0.1",
+  "main" : "./app.js",
+  "author" : {
+    "name" : "Drew Mecham",
+    "email" : "mechdrew@gmail.com"
+  },
+  "keywords" : [ ],
+  "licenses" : {
+    "type" : "mit"
+  },
+  "repository" : {
+    "type" : "git",
+    "url" : "git://github.com/mechdrew/pi-gpio-server.git"
+  },
+  "bugs" : {
+    "url" : "http://github.com/mechdrew/pi-gpio-server/issues"
+  },
+  "dependencies" : {
+    "express": "4.10.7",
+    "lodash": "2.4.1",
+    "pi-gpio" : "git+https://github.com/mechdrew/pi-gpio.git#Promises",
+    "q": "1.1.2"
+  }
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html ng-app="Pins">
+  <head>
+    <title>Pins</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/power/css/pins.css"/>
+    <script src="/libs/lodash.min.js"></script>
+    <script src="/libs/angular_1.2.28.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/power/js/pins.js"></script>
+  </head>
+  <body>
+    <div ng-controller="PinCtrl">
+      <div ng-repeat="(pin, active) in pins" class="pin" ng-click="togglePin(pin)">
+        <img ng-src="/images/power_{{ active ? 'on' : 'off' }}.png"/>
+        <p>{{ $index + 1 }} (Pin {{ pin }})</p>
+      </div>
+    </div>
+  </body>
+</html>
