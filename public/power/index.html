@@ -12,10 +12,13 @@
     <script src="/power/js/pins.js"></script>
   </head>
   <body>
-    <div ng-controller="PinCtrl">
-      <div ng-repeat="(pin, active) in pins" class="pin" ng-click="togglePin(pin)">
-        <img ng-src="/images/power_{{ active ? 'on' : 'off' }}.png"/>
-        <p>{{ $index + 1 }} (Pin {{ pin }})</p>
+    <div id="PinCtrl" ng-controller="PinCtrl">
+      <div ng-show="!connected">
+        No active connection to server, cannot change pins.
+      </div>
+      <div ng-repeat="pin in pins" class="pin" ng-click="togglePin(pin)">
+        <img ng-src="/images/power_{{ pin.active ? 'on' : 'off' }}.png"/>
+        <p>{{ pin.name }} (Pin {{ pin.pin }})</p>
       </div>
     </div>
   </body>

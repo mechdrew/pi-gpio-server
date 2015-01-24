@@ -21,6 +21,7 @@
     "express": "4.10.7",
     "lodash": "2.4.1",
     "pi-gpio" : "git+https://github.com/mechdrew/pi-gpio.git#Promises",
-    "q": "1.1.2"
+    "q": "1.1.2",
+    "socket.io": "1.2.1"
   }
 }
